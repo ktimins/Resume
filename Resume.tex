@@ -5,152 +5,139 @@
 \usepackage{enumitem}
 \setlist{nolistsep}
 \usepackage[none]{hyphenat}
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
+%\usepackage{newcent}   % uses new century schoolbook postscript font
 \setlength{\textwidth}{5.1in} % set width of text portion
 \usepackage{fancyhdr}
 \usepackage{calc}
 \fancypagestyle{plain}{%
-    \fancyhf{}
-    \renewcommand{\headrulewidth}{0pt}
-    %\headsep = 1.2cm
-    \setlength{\textheight}{650pt}
-    \fancyheadoffset[HL]{4.7cm}
-    \fancyfootoffset[L]{3.3cm}
-    \fancyfoot[L]{Kyle R. Timins}
-    \fancyfoot[R]{Page \thepage}}
+   \fancyhf{}
+   \renewcommand{\headrulewidth}{0pt}
+   %\headsep = 1.2cm
+   \setlength{\textheight}{650pt}
+   \fancyheadoffset[HL]{4.7cm}
+   \fancyfootoffset[L]{3.3cm}
+   \fancyfoot[L]{Kyle R. Timins}
+   \fancyfoot[R]{Page \thepage}}
 
 \fancypagestyle{empty}{%
-    \fancyhf{}
-    \headsep = 0cm
-    \renewcommand{\headrulewidth}{0pt}
-    \fancyfootoffset[L]{3.3cm}
-    \fancyfoot[L]{Kyle R. Timins}
-    \fancyfoot[R]{Page \thepage}}
+   \fancyhf{}
+   \headsep = 0cm
+   \renewcommand{\headrulewidth}{0pt}
+   \fancyfootoffset[L]{3.3cm}
+   \fancyfoot[L]{Kyle R. Timins}
+   \fancyfoot[R]{Page \thepage}}
 
 \begin{document}
 \pagestyle{plain}
 \thispagestyle{empty}
 %% Center the name over the entire width of resume:
- \moveleft.5\hoffset\centerline{\large\bf Kyle R. Timins}
+\moveleft.5\hoffset\centerline{\large\bf Kyle R. Timins}
 %% Draw a horizontal line the whole width of resume:
- \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
 %% address begins here
 %% Again, the address lines must be centered over entire width of resume:
- \moveleft.5\hoffset\centerline{161 Oxford Drive}
- \moveleft.5\hoffset\centerline{South Windsor, CT 06074}
- \moveleft.5\hoffset\centerline{(860) 212-2254}
- \moveleft.5\hoffset\centerline{rzitex@gmail.com}
+\moveleft.5\hoffset\centerline{161 Oxford Drive}
+\moveleft.5\hoffset\centerline{South Windsor, CT 06074}
+\moveleft.5\hoffset\centerline{(860) 212-2254}
+\moveleft.5\hoffset\centerline{KyleRTimins@gmail.com}
 
 
 \begin{resume}
- 
-\section{OBJECTIVE} %\#\#\# CHANGE ME \#\#\#
-                    To secure a full time position post-graduation that utilizes 
-                    my schooling and internship experiences
- 
 
-\section{EDUCATION} {\sl Bachelor of Science,} Computer Software Engineering, 
-                    overall GPA: 3.23\\
-                    % \sl will be bold italic in New Century Schoolbook (or
-	                  % any postscript font) and just slanted in
-		                %	Computer Modern (default) font
-                    Vermont Technical College, Randolph Center, VT,
-                    expected May 2014 \\
-                    {\sl Achievements:}
-                    \begin{itemize} %\itemsep -2pt
-                        \item High School academic awards received in Math, 
-                              Science, and Technology
-                        \item Recipient of Vermont Technical College four year
-                              Presidential Scholarship \\for excellence in high 
-                              school academics
-                    \end{itemize}
-                    \vspace{-.3cm}
- 
-                             \begin{tabbing}
-\section{COMPUTER \\ SKILLS} {\sl Languages:} Perl 5, Java, HTML, Bash, \LaTeX\ \\
-                             {\sl Operating Systems:} GNU/Debian, Linux, Unix \\
-                             {\sl Certifications:} Cisco CCNA Discovery 1-4\\
-                             {\sl Exposure To:} \= Ada, Computer security, FreeBSD,
-                             Microsoft Access, Python/Django,\\ 
-                             \> Scheme,  Sleuth Kit/Autopsy
-                             \end{tabbing}
- 
-\section{EXPERIENCE} {\sl IT Summer Intern} \hfill Jun 2013 -- Aug 2013 \\
-                     Travelers Ins., Hartford, CT\\\
-                     OAI-SYS Department -- Information - Systems Security
-                     \begin{itemize}  %\itemsep -2pt %reduce space between items
-                         \item Created Perl 5 scripts to perform metrics on 
-                         compliance
-                         \item Created and maintained database of Portable 
-                         Media Exceptions
-                         \item Created basic list of endpoint security
-                         \item Capstone on current and potential use of mobile 
-                         devices in Travelers' Claim Department
-                     \end{itemize}
+   \section{OBJECTIVE} %\#\#\# CHANGE ME \#\#\#
+   To secure a full time position utilizes my $\tilde{}$ five years of workforce experience
+   along with my own personal learned knowledge.
 
-                     {\sl IT Summer Intern} \hfill Jun 2012 -- Aug 2012 \\
-                     Travelers Ins., Hartford, CT\\\
-                     OAI-SYS Department -- Service Management
-                     \begin{itemize} %\itemsep -2pt %reduce space between items
-                         \item Created Perl 5 scripts to increase efficiency and
-                               automation of Server Audits
-                         \item Performed Server Audit
-                         \item Headed XMatters add-on research to increase escalation
-                               efficiency
-                         \item Worked on N05/C03 patches for BMC TM ART monitoring
-                               system
-                         \item Capstone on current and potential use of 
-                               automation in Travelers
-                     \end{itemize}
-      
-                     {\sl IT Summer Intern} \hfill  May 2011 -- Aug 2011 \\
-                     Travelers Ins., Hartford, CT\\\
-                     OAI-SYS Department -- Advanced Technologies
-                     \begin{itemize}   %\itemsep -2pt %reduce space between items
-                         \item Created Perl 5 scripts to increase efficiency and 
-                               automation
-                         \item Fixed web applications to allow for cross-browser 
-                               compatibility
-                         \begin{itemize} %\itemsep -2pt %reduce space between items
-                             \item Allowed custom tool tip pop-up to be used in non
-                                   Internet Explorer \\browsers
-                             \item Create copy from browser work-around for non
-                                   Internet Explorer \\browsers
-                         \end{itemize}
-                         \item Remotely reinstalled firewall device operating
-                               system and created written \\documentation
-                    \end{itemize}
 
-\section{EXPERIENCE \\ CONT.}
-		    {\sl IT Summer Intern Cont.} \hfill May 2011 -- Aug 2011 
-                    \begin{itemize}
-                         \item Organized retired Cisco networking equipment for
-                               recycling
-                         \item Capstone on potential use of open source software 
-                               in Travelers
-                     \end{itemize} 
- 
-\section{COMMUNITY \\ SERVICE} 
-                Presented on Internet and computer security at Lebanon, 
-                NH High School\hfill 2013\\
-                Food Share volunteer, Varney Farm, South Windsor, 
-                CT \hfill 2008 -- 2010
-                \begin{itemize}
-                    \item Featured in 2010 Food Share monthly newsletter
-                \end{itemize}
-     
+   \section{EDUCATION}
+   {\sl Bachelor of Science,} 
+   Computer Software Engineering,
+   Vermont Technical College, Randolph Center, VT,\\
+   Graduated May 2014 \\
+   \vspace{-.3cm}
 
-\section{EXTRA- \\ CURRICULAR \\ ACTIVITIES} 
-                Participated in CCSCNE Programming Competition
-                	\hfill Apr 2013\\
-                Co-founder and President of VTCsec (Security Club) 
-                    \hfill 2011 -- 2013\\
-                Competed in NYU Poly CSAW CTF \hfill 2011 -- 2012\\
-                Server maintainer of VTC Adventurers Guild (Gaming Club)
-                    \hfill 2010 -- 2012\\
-                {\sl Member of:} Brewing Club, Computer Club, Gaming Club, 
-                                 Security Club
- 
+   \begin{tabbing}
+   \section{COMPUTER \\ SKILLS}
+      {\sl Languages:} 
+      Powershell, C\#, VB6, Bash, \LaTeX, Perl, VB.Net, T-SQL, XML/XPath, \\ 
+      AutoHotKey \\
+      {\sl Operating Systems:} 
+      Windows, GNU/Linux, Unix \\
+      {\sl Programs:} 
+      Vim \\
+      {\sl Exposure To:} 
+      Ada, Computer security, FreeBSD, CLISP, Java, Scheme
+   \end{tabbing}
+
+   \section{EXPERIENCE} 
+   {\sl Software Engineer \&\& Senior Software Engineer} \hfill Jun 2014 -- Current \\
+   Insurity, Hartford, CT\\\
+   Multiple Areas
+   \begin{itemize}  %\itemsep -2pt %reduce space between items
+      \item Worked on Backend of thirteen Property \& Causality Lines of Business
+      \item Worked on interfaces that created the feed to downstream Reporting \\
+         Systems like WINS and Custom Systems
+      \item Worked on creation of XML that passed information from our Policy system \\
+         to the Billing system.
+      \item Helped create automated systems, behind the scenes, that made labor heavy \\
+         and mundane into automated processes that went beyond current processes.
+      \item Various, random tasks that covered all parts of the company.
+   \end{itemize}
+
+   {\sl IT Summer Intern} \hfill Jun 2013 -- Aug 2013 \\
+   Travelers Ins., Hartford, CT\\\
+   OAI-SYS Department -- Information - Systems Security
+   \begin{itemize}  %\itemsep -2pt %reduce space between items
+      \item Created Perl 5 scripts to perform metrics on
+         compliance
+      \item Created and maintained database of Portable
+         Media Exceptions
+      \item Created basic list of endpoint security
+      \item Capstone on current and potential use of mobile
+         devices in Travelers' Claim Department
+   \end{itemize}
+
+   {\sl IT Summer Intern} \hfill Jun 2012 -- Aug 2012 \\
+   Travelers Ins., Hartford, CT\\\
+   OAI-SYS Department -- Service Management
+   \begin{itemize} %\itemsep -2pt %reduce space between items
+      \item Created Perl 5 scripts to increase efficiency and
+         automation of Server Audits
+      \item Performed Server Audit
+      \item Headed XMatters add-on research to increase escalation
+         efficiency
+      \item Worked on N05/C03 patches for BMC TM ART monitoring
+         system
+      \item Capstone on current and potential use of
+         automation in Travelers
+   \end{itemize}
+
+   {\sl IT Summer Intern} \hfill  May 2011 -- Aug 2011 \\
+   Travelers Ins., Hartford, CT\\\
+   OAI-SYS Department -- Advanced Technologies
+   \begin{itemize}   %\itemsep -2pt %reduce space between items
+      \item Created Perl 5 scripts to increase efficiency and
+         automation
+      \item Fixed web applications to allow for cross-browser
+         compatibility
+         \begin{itemize} %\itemsep -2pt %reduce space between items
+            \item Allowed custom tool tip pop-up to be used in non
+               Internet Explorer \\browsers
+            \item Create copy from browser work-around for non
+               Internet Explorer \\browsers
+         \end{itemize}
+      \item Remotely reinstalled firewall device operating
+         system and created written \\documentation
+   \end{itemize}
+
+   \section{EXPERIENCE \\ CONT.}
+   {\sl IT Summer Intern Cont.} \hfill May 2011 -- Aug 2011
+   \begin{itemize}  %\itemsep -2pt %reduce space between items
+      \item Organized retired Cisco networking equipment for
+         recycling
+      \item Capstone on potential use of open source software
+         in Travelers
+   \end{itemize}
 
 \end{resume}
 \end{document}
