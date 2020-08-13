@@ -1,0 +1,3 @@
+[submodule "Awesome-CV"]
+	path = Awesome-CV
+	url = https://gitlab.com/rzitex/Awesome-CV.git

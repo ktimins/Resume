@@ -1,291 +1,86 @@
-% LaTeX resume using res.cls
-\documentclass[margin]{res}
-%\usepackage[scaled]{helvet}
-\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-\usepackage{enumitem}
-\setlist{nolistsep}
-\usepackage[none]{hyphenat}
-%\usepackage{newcent}   % uses new century schoolbook postscript font
-\setlength{\textwidth}{5.1in} % set width of text portion
-\usepackage{fancyhdr}
-\usepackage{calc}
-\fancypagestyle{plain}{%
-   \fancyhf{}
-   \renewcommand{\headrulewidth}{0pt}
-   %\headsep = 1.2cm
-   \setlength{\textheight}{650pt}
-   \fancyheadoffset[HL]{4.7cm}
-   \fancyfootoffset[L]{3.3cm}
-   \fancyfoot[L]{Kyle R. Timins}
-   \fancyfoot[R]{Page \thepage}}
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
 
-\fancypagestyle{empty}{%
-   \fancyhf{}
-   \headsep = 0cm
-   \renewcommand{\headrulewidth}{0pt}
-   \fancyfootoffset[L]{3.3cm}
-   \fancyfoot[L]{Kyle R. Timins}
-   \fancyfoot[R]{Page \thepage}}
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% LaTeX resume using res.cls
+\documentclass[12pt,letterpaper]{awesome-cv}
+
+% Configure page margins with geometry
+%\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+%\colorlet{awesome}{awesome-concrete}
+% Uncomment if you would like to specify your own color
+%\definecolor{awesome}{HTML}{8B0000}
+%\definecolor{awesome}{HTML}{191970}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+%\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+\name{Kyle}{Timins}
+\position{Software Developer}
+\address{161 Oxford Drive, South Windsor, CT, 06074}
+\mobile{(860) 212-2254}
+\email{KyleRTimins@gmail.com}
+\github{ktimins}
+
+%\quote{}
+
+%-------------------------------------------------------------------------------
 
 \begin{document}
-\pagestyle{plain}
-\thispagestyle{empty}
-%% Center the name over the entire width of resume:
-\moveleft.5\hoffset\centerline{\large\bf Kyle R. Timins}
-%% Draw a horizontal line the whole width of resume:
-\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
-%% address begins here
-%% Again, the address lines must be centered over entire width of resume:
-\moveleft.5\hoffset\centerline{161 Oxford Drive}
-\moveleft.5\hoffset\centerline{South Windsor, CT 06074}
-\moveleft.5\hoffset\centerline{(860) 212-2254}
-\moveleft.5\hoffset\centerline{KyleRTimins@gmail.com}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {Kyle R. Timins}
+  {}
+  {\thepage}
 
 
-\begin{resume}
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
 
-   \section{OBJECTIVE} %\#\#\# CHANGE ME \#\#\#
-   To secure a full time position utilizing my over five years of workforce experience
-   along with my own personal learned knowledge.
+\input{resume/summary.tex}
+\input{resume/technologies.tex}
+\input{resume/career.tex}
+\input{resume/education.tex}
 
-
-   \section{EDUCATION}
-   {\sl Bachelor of Science,} 
-   Computer Software Engineering,
-   Vermont Technical College, Randolph Center, VT,\\
-   Graduated May 2014 \\
-   \vspace{-.5cm}
-
-   \begin{tabbing}
-   \section{COMPUTER \\ SKILLS}
-      {\sl Languages:} 
-      Powershell, C\#, Powershell, Bash, \LaTeX, VB.Net, T-SQL, JSON,\\ 
-      \hspace{.75cm}XML/XPath, Perl, AutoHotKey \\
-      {\sl Operating Systems:} 
-      Windows, GNU/Linux, Unix \\
-      {\sl Programs:} 
-      Vim, Git \\
-      {\sl Exposure To:} 
-      Ada, Computer security, FreeBSD, CLISP, Java, Scheme, MVC, \\
-      \hspace{.75cm}Javascript
-
-   \end{tabbing}
-
-   \section{EXPERIENCE} 
-   {\sl Senior Software Developer} \hfill Jun 2014 -- March 2020 \\
-   {\sl Software Engineer \&\& Senior Software Engineer} \hfill // Previous Titles \\
-   Insurity, Hartford, CT\\\
-   Multiple Areas
-   \begin{itemize}  %\itemsep -2pt %reduce space between items
-      \item Worked on Backend of thirteen Property \& Causality Lines of Business
-      \begin{itemize}
-      	 \item Maintained (Bug fixes) both Legacy and the new ``Evolution'' products
-      	 \item Created new functionality via both Customer enhancements and \\
-      	    Regulatory enhancements
-      	 \item Refactored codebase to increase maintainability, readability, 
-      	    and bring them more inline with SOLID principles
-      	 \item {\sl Parts of the Backend System:} Rating, Mapping, Statistical Coding, 
-      	    Policy Forms Generation
-      	 \item {\sl Lines of Business:} Property Casualty, Business Owners, ISO Inland \\
-      	     Marine, AAIS Inland Marine, Ocean Marine, Boiler and Machinery, \\
-      	     Commercial Output, Capital Assets, Cargo, and Farm
-      	     \begin{itemize}
-      	        \item Was part of the original development team to bring up Farm and 
-      	           Cargo
-      	        \item Currently learning Liability lines. Such as General Liability and Crime 
-                     lines of business.
-      	     \end{itemize}
-      \end{itemize}
-      \item Worked on interfaces that created the feed to downstream Reporting 
-         Systems like WINS and Custom Systems
-         \begin{itemize}
-            \item Became the sole Subject Matter Expert (SME) in these areas when the 
-               previous SME left less than a month after I started learning these areas
-            \item Worked with our internal WINS team and Clients' WINS teams to gain a 
-               better understanding and knowledge of the WINS system itself
-            \item Worked with my manager, at that time, on an initiative to \\
-            distribute 
-               knowledge and workload of this to Line of Business teams where 
-               applicable. 
-               Tasks of this initiative included:
-               \begin{itemize}
-                  \item Setup training classes/presentations 
-   \section{EXPERIENCE \\ CONT.}
-                  \item Work one on one with those who would be performing harder tasks, 
-                     such as bringing up new Client or Lines from scratch
-                  \item Maintain an ``Open Door'' policy with helping others
-               \end{itemize}
-         \end{itemize}
-      \item Worked on creation of XML that passed information from our Policy system 
-         to the Billing system.
-         \begin{itemize}
-            \item ``Owned'' the code for this and am the SME of this code and 
-               system
-            \item Perform enhancement and break-fix work on this system
-            \item Became a ``liaison'' between our Policy system team and the Billing 
-               system team to increase communication and efficiency, including creating 
-               proper procedures on how the two systems and teams work together
-            \item Completed an effort to bring the XML created into proper 
-               compliance with XML namespaces and namespace prefixes
-            \item Created ``mock/fix'' XMLs to fix any premium discrepencies between the 
-               Policy and Billing systems due to various issue.s
-         \end{itemize}
-      \item Helped create automated systems, behind the scenes, that made labor heavy 
-         and mundane tasks into automated processes that went beyond current \\
-         processes.
-         \begin{itemize}
-            \item Created an automated system, in Powershell, that increased reporting 
-               and visibility of errors occurring in hosted environments utilizing our 
-               current error system that would only create a Zip file of log files and 
-               entry in a database. This worked as a ``second line of defense'' in 
-               conjunction with standard environment monitoring systems.
-               \begin{itemize}
-                  \item Was designed and implemented as a JSON based configured system 
-                     allowing for a variety of different ``run reasons'' without having 
-                     to change the program itself.
-                  \item Allowed the user to pick from a variety of different predetermined 
-                     categories of errors that were known to happen or define their own set 
-                     of exception messages or error stacks, utilizing SQL Server wild cards, 
-                     including the null set to get back all errors. A set of ``not'' exceptions 
-                     can also be defined to exclude certain errors, also utilizing SQL Server 
-                     wild cards, from being reported in the run. 
-                     Multiple sets could be defined in a config file to give a more 
-                     encompassing view of the system status. 
-                     Further fine tuning could be done by giving timespans to look back, a 
-                     minimum count threshold, per item in the set, the system that threw 
-                     the error, and the Line(s) of Business associated with the error.
-                  \item The config file allowed for defining a set, one or more, Client and 
-                     environment pair(s) to define which database to gather information from
-                  \item CSV, JSON, and/or XML files could be created, as defined in the  
-                     config file, to allow for further reporting of errors.
-                  \item An email could also be created containing the error information, with 
-                     granular tuning of information included defined by error set. Reporting 
-                     files could be attached to the email. (Zip files were originally attached 
-                     as well, but functionally was removed due to email size limitation and 
-                     replaced with a link to where to get a zip of zips.) A set of email 
-                     recipients could also be 
-                     defined based on a defined service pack (aka. sprint) or a specified date range 
-                     or timespan from a specified start date.
-               \end{itemize}
-            \item Created an automated reporting and notification system of scheduled assignments. 
-               \begin{itemize}
-                  \item The previous process involved creating a spreadsheet of assignments that 
-                     remained ``stagnant'' after the start of the service pack (aka. sprint) it was 
-                     for. After the system was put through a trial run, it was
-               \end{itemize}
-         \end{itemize}
-         
-\end{itemize}
-
-   \section{EXPERIENCE \\ CONT.}
-
-\begin{itemize}
-    \item[]
-         \begin{itemize}
-             \item[]
-               \begin{itemize}
-                  \item[] implemented as official procedure for assignment schedule reporting and notification.
-                  \item Was originally created in Powershell to utilize functionality I created in 
-                     other scripts. It was later ported over to a full C\# application.
-                  \item Was designed and implemented as JSON based configured system allowing for a 
-                      variety of different ``run reasons'' without having to modify the program itself.
-                      This was used in conjunction with command line arguments to define the tasks
-                      desired for that run. Command line arguments also allowed for overwriting the
-                      definitions in the config file.
-                  \item Was originally a command line program only. However, a GUI was later added to
-                     increase usability of ``one off'' runs.
-                  \item It utilized a wild card based system to determine what spreadsheet to read in
-                     based on a lookup table of conversion between a date span and the defined service
-                     pack numbering. Naming could be changed in the config file.
-                  \item It would read in the spreadsheet of assignments and call out to the Assignment
-                     Management System via API to get up-to-date \\
-                     information on each assignment including
-                     current resource assigned and estimated \& completed hours. This could be scheduled
-                     via \\
-                     Windows Scheduled Tasks or run manually on-demand. A CSV file, in the Powershell 
-                     version, or a JSON file, in the C\# version, would be created to store information 
-                     collected so that information reporting could be performed without an update of data.
-                  \item An XLSX file could be created to allow for reporting and analysis. This was later
-                     utilized for Assignees to be able to state their current status of their assignments.
-                     (i.e. Currently being worked on, delayed, will not make the scheduled due date, 
-                     etc...)
-                  \item Emails could be created to be sent to the Assignees with their current list, to
-                     Managers of all assignments for those under them grouped by Assignee, and Account
-                     Managers of all assignments for Clients they are responsible for grouped by Client 
-                     and Assignee. CCed recipients could be specified, along with a ``Do not send to'' 
-                     list in case people didn't want to be included on the emails. As well, a CSV file 
-                     was utilized defining a lookup of recipients that should be automatically added if
-                     a defined recipient was already on the email.
-               \end{itemize}
-         \end{itemize}
-      \item Spearheaded a project to upgrade to MSXML6 in our legacy system. This utilized our official
-         build system, along with a custom built Powershell build script, and our developer update system
-         that I modified to allow for distributing the DLLs created from a build machine to a test machine
-         that existed outside
-         of our standard build and update system. My role in this was not only to do software upgrades, 
-         but also become a ``one man'' DevOps team in a siloed environment.
-      \item Various, random tasks that covered all parts of the company.
-   \end{itemize}
-
-   {\sl IT Summer Intern} \hfill Jun 2013 -- Aug 2013 \\
-   Travelers Ins., Hartford, CT\\\
-   OAI-SYS Department -- Information - Systems Security
-   \begin{itemize}  %\itemsep -2pt %reduce space between items
-      \item Created Perl 5 scripts to perform metrics on
-         compliance
-      \item Created and maintained database of Portable
-         Media Exceptions
-      \item Created basic list of endpoint security
-      \item Capstone on current and potential use of mobile
-         devices in Travelers' Claim Department
-   \end{itemize}
-
-\newpage
-
-   \section{EXPERIENCE \\ CONT.}
-   {\sl IT Summer Intern} \hfill Jun 2012 -- Aug 2012 \\
-   Travelers Ins., Hartford, CT\\\
-   OAI-SYS Department -- Service Management
-   \begin{itemize} %\itemsep -2pt %reduce space between items
-      \item Created Perl 5 scripts to increase efficiency and
-         automation of Server Audits
-   \end{itemize}
-   \begin{itemize}
-      \item Performed Server Audit
-      \item Headed XMatters add-on research to increase escalation
-         efficiency
-      \item Worked on N05/C03 patches for BMC TM ART monitoring
-         system
-      \item Capstone on current and potential use of
-         automation in Travelers
-   \end{itemize}
-   
-   {\sl IT Summer Intern} \hfill  May 2011 -- Aug 2011 \\
-   Travelers Ins., Hartford, CT\\\
-   OAI-SYS Department -- Advanced Technologies
-   \begin{itemize}   %\itemsep -2pt %reduce space between items
-      \item Created Perl 5 scripts to increase efficiency and
-         automation
-      \item Fixed web applications to allow for cross-browser
-         compatibility
-         \begin{itemize} %\itemsep -2pt %reduce space between items
-            \item Allowed custom tool tip pop-up to be used in non
-               Internet Explorer \\
-               browsers
-            \item Create copy from browser work-around for non
-               Internet Explorer \\
-               browsers
-         \end{itemize}
-      \item Remotely reinstalled firewall device operating
-         system and created written \\
-         documentation
-      \item Organized retired Cisco networking equipment for
-         recycling
-      \item Capstone on potential use of open source software
-         in Travelers
-   \end{itemize}
-
-\end{resume}
 \end{document}
 
 
